@@ -58,8 +58,8 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>U.S. Unemployment 1990 - 2017 by County</h1>
-              <span class="post-meta">Posted on October 27, 2018</span>
+              <h1>Turkey Eartquakes 1990 - 2023 by Cities</h1>
+              <span class="post-meta">Posted on May, 2024</span>
             </div>
           </div>
         </div>
@@ -80,19 +80,19 @@
         </ol>
         <script>
 
-        var topoJSONFile = "data/us-10m.v1.json";
+        var topoJSONFile = "data/turkey.json";
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.counties, enter counties
-        var featureCollection = "counties";
-        var csvFile = "data/unemployment_by_county_year.csv";
-        var attributeAlias = "Unemployment Rate (%)";
+        var featureCollection = "turkey";
+        var csvFile = "data/depremveri.csv";
+        var attributeAlias = "# of Eartquakes";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
-        var min = 0, max = 20;
+        var min = 0, max = 855;
 
         //enter the beginning year or date/time of animation.
-        var beginTime = 1990, endTime = 2017;
+        var beginTime = 1990, endTime = 2023;
 
         // width and height of map frame
         var height = 600;
