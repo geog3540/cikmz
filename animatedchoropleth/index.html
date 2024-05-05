@@ -19,7 +19,7 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
-  <title>An Animated Choropleth Map of Historical Turkey Eartquakes</title>
+  <title>An Animated Choropleth Map of U.S. Unemployment by County</title>
 </head>
 
 <body>
@@ -58,8 +58,8 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Turkey Earthquakes 1990 - 2023 by Cities</h1>
-              <span class="post-meta">Posted on May 8, 2024</span>
+              <h1>U.S. Unemployment 1990 - 2017 by County</h1>
+              <span class="post-meta">Posted on October 27, 2018</span>
             </div>
           </div>
         </div>
@@ -80,27 +80,27 @@
         </ol>
         <script>
 
-        var topoJSONFile = "data/turkey.json";
+        var topoJSONFile = "data/us-10m.v1.json";
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.counties, enter counties
         var featureCollection = "counties";
-        var csvFile = "data/earthquake.csv";
-        var attributeAlias = "Number of Earthquakes";
+        var csvFile = "data/unemployment_by_county_year.csv";
+        var attributeAlias = "Unemployment Rate (%)";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
-        var min = 0, max = 855;
+        var min = 0, max = 20;
 
         //enter the beginning year or date/time of animation.
-        var beginTime = 1990, endTime = 2023;
+        var beginTime = 1990, endTime = 2017;
 
         // width and height of map frame
-        var height = 610;
-        var width = 975;
+        var height = 600;
+        var width = 960;
 
         // Find the abbreviations of color names from https://colorbrewer2.org/
         var colors =  colorbrewer.Reds;
-        var numOfClasses = 10;
+        var numOfClasses = 9;
 
         //DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
         ////////////////////////////////////////////////////////////////////////////////////////////////
