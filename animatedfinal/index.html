@@ -16,7 +16,7 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
-  <title>An Animated Choropleth Map of Blood Lead Poisoning in Chicago Community Areas</title>
+  <title>An Animated Choropleth Map of Number of Historical Turkey Earthquakes</title>
 </head>
 
 <body>
@@ -55,8 +55,8 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Percent Children Screened With Elevated Blood Lead Level in Chicago 1999 - 2013 by Community Area</h1>
-              <span class="post-meta">Posted on May 15, 2020</span>
+              <h1>The Number of Earthquakes in Turkey 1990 - 2023 by Cities</h1>
+              <span class="post-meta">Posted on May, 2024</span>
             </div>
           </div>
         </div>
@@ -78,23 +78,23 @@
         <script>
 
         // var topoJSONFile = "data/contour.json";
-        var topoJSONFile = "data/contour.geojson";
+        var topoJSONFile = "data/turkey.geojson";
         // enter the desired projection - note that input geojson has to be in WGS84 GCS
         var projection = d3.geoTransverseMercator().rotate([87,0]);
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.polygons, enter polygons
-        var featureCollection = "contour";
+        var featureCollection = "turkey";
         // id field in the topojson file
-        var idfield = "area_numbe"
-        var csvFile = "data/ElevatedBloodLeadLevelRate.csv";
-        var attributeAlias = "Lead poisoning rate (%)";
+        var idfield = "cityname"
+        var csvFile = "data/datacsv.csv";
+        var attributeAlias = "# of Earthquakes";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
-        var min = 0, max = 40;
+        var min = 0, max = 855;
 
         //enter the beginning year or date/time of animation.
-        var beginTime = 1999, endTime = 2013;
+        var beginTime = 1990, endTime = 2023;
 
         // width and height of map frame
         var height = 600;
@@ -102,7 +102,7 @@
 
         // Find the abbreviations of color names from https://colorbrewer2.org/
         var colors =  colorbrewer.Reds;
-        var numOfClasses = 9;
+        var numOfClasses = 10;
 
         //DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
         ////////////////////////////////////////////////////////////////////////////////////////////////
