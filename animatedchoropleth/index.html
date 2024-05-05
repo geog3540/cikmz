@@ -81,12 +81,11 @@
         <script>
 
         var topoJSONFile = "data/turkey.json";
-        var projection = d3.geoTransverseMercator().rotate([87,0]);
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.counties, enter counties
         var featureCollection = "turkey";
         var csvFile = "data/depremveri.csv";
-        var attributeAlias = "# of Eartquakes";
+        var attributeAlias = "# of Earthquakes";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
@@ -96,12 +95,12 @@
         var beginTime = 1990, endTime = 2023;
 
         // width and height of map frame
-        var height = 600;
-        var width = 960;
+        var height = 100;
+        var width = 160;
 
         // Find the abbreviations of color names from https://colorbrewer2.org/
         var colors =  colorbrewer.Reds;
-        var numOfClasses = 9;
+        var numOfClasses = 10;
 
         //DO NOT CHANGE ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING
         ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -109,7 +108,7 @@
 
         var svg = d3.select("svg");
         var path = d3.geoPath();
-        var format = d3.format("");
+        var format = d3.format(".");
 
         var colorScheme = colors[9];
         colorScheme.unshift("#eee");
